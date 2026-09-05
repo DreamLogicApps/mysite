@@ -1099,12 +1099,20 @@ h1, h2, h3, h4 {
 
   /* Apps */
   .app-card {
-    flex: 0 0 75%;
-    min-width: 220px;
+    flex: 0 0 85%;
+    min-width: 260px;
   }
 
   .app-card-img {
     padding: 1rem;
+  }
+
+  .carousel-arrow {
+    display: none;
+  }
+
+  .app-carousel-wrapper {
+    gap: 0;
   }
 
   /* About */
