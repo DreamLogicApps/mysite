@@ -61,6 +61,7 @@
 }
 
 /* Typography */
+:root {
   --font-heading: 'Outfit', -apple-system, sans-serif;
   --font-body: 'Inter', -apple-system, sans-serif;
 
