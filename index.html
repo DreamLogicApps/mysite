@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DreamLogic Apps — We craft beautiful, engaging mobile apps. Home to Code Trace, Am I Awake?, AuraScan, and Trip Tally.">
+    <meta name="theme-color" content="#f97316">
+    <title>DreamLogic Apps — Mobile Apps Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <header id="navbar" class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img src="/logo.png" alt="DreamLogic Apps" class="header-logo">
+          <span class="logo-text">Dream<span class="logo-highlight">Logic</span></span>
+        </a>
+        <nav class="nav-links" id="navLinks">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#apps" class="nav-link">Apps</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="hero-bg">
+          <div class="hero-gradient-1"></div>
+          <div class="hero-gradient-2"></div>
+          <div class="hero-grid-overlay"></div>
+        </div>
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Indie App Studio
+          </div>
+          <h1>Crafting Digital<br><span class="text-gradient">Dreams</span> Into Reality</h1>
+          <p class="hero-subtitle">We build beautiful, engaging, and sometimes hilariously pointless mobile applications that push the boundaries of creativity.</p>
+          <div class="hero-actions">
+            <a href="#apps" class="btn btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              Explore Our Apps
+            </a>
+            <a href="#about" class="btn btn-outline">Learn More</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-number">4</span>
+              <span class="hero-stat-label">Apps Built</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-number">3</span>
+              <span class="hero-stat-label">On Play Store</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-number">∞</span>
+              <span class="hero-stat-label">Fun Factor</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Apps Section -->
+      <section id="apps" class="apps-section">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-tag">Our Portfolio</span>
+            <h2 class="section-title">Featured Applications</h2>
+            <p class="section-subtitle">Each app is crafted with care, creativity, and a touch of the unexpected.</p>
+          </div>
+
+          <div class="app-carousel-wrapper">
+            <button class="carousel-arrow carousel-arrow-left" id="carouselLeft" aria-label="Scroll left">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+
+            <div class="app-grid" id="appGrid">
+
+              <article class="app-card" id="card-trip-tally">
+                <div class="app-card-img">
+                  <img src="/app-trip-tally.png" alt="Trip Tally" loading="lazy">
+                </div>
+                <div class="app-card-body">
+                  <div class="app-card-header">
+                    <span class="badge badge-upcoming">Upcoming</span>
+                  </div>
+                  <h3 class="app-card-title">Trip Tally</h3>
+                  <p class="app-card-desc">Your ultimate travel companion for tracking expenses and memories on the go.</p>
+                  <span class="btn btn-disabled">Coming Soon</span>
+                </div>
+              </article>
+
+              <article class="app-card" id="card-code-trace">
+                <div class="app-card-img">
+                  <img src="/app-code-trace.png" alt="Code Trace" loading="lazy">
+                </div>
+                <div class="app-card-body">
+                  <div class="app-card-header">
+                    <span class="badge badge-published">Published</span>
+                  </div>
+                  <h3 class="app-card-title">Code Trace</h3>
+                  <p class="app-card-desc">The ultimate cyber-inspired code-cracking battle game where logic meets speed.</p>
+                  <a href="https://play.google.com/store/apps/details?id=com.dreamlogic.codetrace_app&hl=en_IN" target="_blank" rel="noopener noreferrer" class="btn btn-store">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.707l2.387 1.381c.713.413.713 1.445 0 1.858l-2.387 1.38-2.537-2.537 2.537-2.082zM5.864 2.658L16.8 9.991l-2.302 2.302-8.634-8.635z"/></svg>
+                    Google Play
+                  </a>
+                </div>
+              </article>
+
+              <article class="app-card" id="card-aurascan">
+                <div class="app-card-img">
+                  <img src="/app-aurascan.png" alt="AuraScan: Personality Scanner" loading="lazy">
+                </div>
+                <div class="app-card-body">
+                  <div class="app-card-header">
+                    <span class="badge badge-published">Published</span>
+                  </div>
+                  <h3 class="app-card-title">AuraScan</h3>
+                  <p class="app-card-desc">A fun and engaging personality scanner that reveals your unique aura and vibe.</p>
+                  <a href="https://play.google.com/store/apps/details?id=com.dreamlogic.aurascan&hl=en_IN" target="_blank" rel="noopener noreferrer" class="btn btn-store">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.707l2.387 1.381c.713.413.713 1.445 0 1.858l-2.387 1.38-2.537-2.537 2.537-2.082zM5.864 2.658L16.8 9.991l-2.302 2.302-8.634-8.635z"/></svg>
+                    Google Play
+                  </a>
+                </div>
+              </article>
+
+              <article class="app-card" id="card-am-i-awake">
+                <div class="app-card-img">
+                  <img src="/app-am-i-awake.png" alt="Am I Awake?" loading="lazy">
+                </div>
+                <div class="app-card-body">
+                  <div class="app-card-header">
+                    <span class="badge badge-published">Published</span>
+                  </div>
+                  <h3 class="app-card-title">Am I Awake?</h3>
+                  <p class="app-card-desc">The hilariously pointless app that challenges you to prove your consciousness.</p>
+                  <a href="https://play.google.com/store/apps/details?id=com.dreamlogic.amiawake&hl=en_IN" target="_blank" rel="noopener noreferrer" class="btn btn-store">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.707l2.387 1.381c.713.413.713 1.445 0 1.858l-2.387 1.38-2.537-2.537 2.537-2.082zM5.864 2.658L16.8 9.991l-2.302 2.302-8.634-8.635z"/></svg>
+                    Google Play
+                  </a>
+                </div>
+              </article>
+
+            </div>
+
+            <button class="carousel-arrow carousel-arrow-right" id="carouselRight" aria-label="Scroll right">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about-section">
+        <div class="section-container">
+          <div class="about-grid">
+            <div class="about-visual">
+              <div class="about-logo-wrapper">
+                <img src="/logo.png" alt="DreamLogic Apps Logo" class="about-logo">
+              </div>
+            </div>
+            <div class="about-text">
+              <span class="section-tag">Who We Are</span>
+              <h2 class="section-title section-title-left">About DreamLogic Apps</h2>
+              <p>Founded on the principle that software should be engaging, intuitive, and fun. We are an indie studio dedicated to exploring the boundaries of what mobile apps can be — from brain-teasing puzzles to quirky utilities that make you smile.</p>
+              <div class="about-features">
+                <div class="about-feature">
+                  <div class="about-feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                  </div>
+                  <div>
+                    <h4>Creative First</h4>
+                    <p>Every app starts with a wild idea and ends with a polished experience.</p>
+                  </div>
+                </div>
+                <div class="about-feature">
+                  <div class="about-feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                  </div>
+                  <div>
+                    <h4>Made With Love</h4>
+                    <p>Each detail is crafted with care and a genuine passion for quality.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="section-container">
+          <div class="contact-card">
+            <div class="contact-content">
+              <span class="section-tag">Say Hello</span>
+              <h2 class="section-title section-title-left">Get in Touch</h2>
+              <p>The best way to reach me is on X. Whether you have feedback, a question, or just want to chat — my DMs are always open!</p>
+              <a href="https://x.com/itsjack_dev" target="_blank" rel="noopener noreferrer" class="btn btn-x">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+                  <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.6 318.1 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
+                </svg>
+                @itsjack_dev
+              </a>
+            </div>
+            <div class="contact-visual">
+              <div class="chat-mockup">
+                <div class="chat-bubble chat-incoming">
+                  <p>Hey! Love your apps 🔥</p>
+                  <span class="chat-time">2:31 PM</span>
+                </div>
+                <div class="chat-bubble chat-outgoing">
+                  <p>Thanks so much! 🙌 What are you building?</p>
+                  <span class="chat-time">2:32 PM</span>
+                </div>
+                <div class="chat-bubble chat-incoming">
+                  <p>Working on something cool. Can we collab?</p>
+                  <span class="chat-time">2:33 PM</span>
+                </div>
+                <div class="chat-bubble chat-outgoing">
+                  <p>Absolutely! DMs are always open 💬</p>
+                  <span class="chat-time">2:33 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#" class="logo footer-logo">
+              <img src="/logo.png" alt="DreamLogic Apps" class="header-logo">
+              <span class="logo-text">Dream<span class="logo-highlight">Logic</span></span>
+            </a>
+            <p>Crafting digital dreams into reality, one app at a time.</p>
+          </div>
+          <div class="footer-nav">
+            <div class="footer-nav-group">
+              <h4>Navigation</h4>
+              <a href="#home">Home</a>
+              <a href="#apps">Apps</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-nav-group">
+              <h4>Legal</h4>
+              <a href="/policy.html">Privacy Policy</a>
+              <a href="/terms.html">Terms of Service</a>
+              <a href="/disclaimer.html">Disclaimer</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 DreamLogic Apps. All rights reserved.</p>
+          <a href="https://x.com/itsjack_dev" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Follow on X">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512" fill="currentColor">
+              <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.6 318.1 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
