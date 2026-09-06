@@ -1187,11 +1187,12 @@ h1, h2, h3, h4 {
 
   .about-text .section-title,
   .about-text .section-tag {
-    text-align: center;
+    text-align: left;
   }
 
   .about-text > p {
-    text-align: center;
+    text-align: left;
+    font-size: 0.9rem;
   }
 
   /* Contact */
