@@ -753,11 +753,11 @@ h1, h2, h3, h4 {
   max-width: 320px;
   aspect-ratio: 1;
   border-radius: var(--radius-xl);
-  background: #000000;
+  background: var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2.5rem;
+  padding: 2rem;
   box-shadow: var(--shadow-xl);
   position: relative;
 }
@@ -775,6 +775,8 @@ h1, h2, h3, h4 {
   width: 100%;
   height: auto;
   border-radius: var(--radius-lg);
+  background: #000000;
+  padding: 1.5rem;
   box-shadow: var(--shadow-lg);
 }
 
