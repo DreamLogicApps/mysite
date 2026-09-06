@@ -44,6 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.classList.remove('active');
       });
     });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+        navLinks.classList.remove('active');
+        menuToggle.classList.remove('active');
+      }
+    });
   }
 
   // Navbar scroll shadow
@@ -81,32 +89,62 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Scroll reveal animation
+  // Scroll reveal animation with stagger
   const revealElements = document.querySelectorAll('.app-card, .about-feature, .contact-card, .section-header, .about-visual, .about-text');
 
   if (revealElements.length > 0 && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, index) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Stagger the animation slightly for elements in a grid
-          const delay = entry.target.classList.contains('app-card')
-            ? index * 100
-            : 0;
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, delay);
-          observer.unobserve(entry.target);
+          // Stagger cards based on their index among siblings
+          const el = entry.target;
+          if (el.classList.contains('app-card')) {
+            const cards = Array.from(el.parentElement.children);
+            const idx = cards.indexOf(el);
+            el.style.transitionDelay = `${idx * 0.1}s`;
+          }
+          el.classList.add('visible');
+          observer.unobserve(el);
         }
       });
     }, {
       threshold: 0.1,
-      rootMargin: '0px 0px -40px 0px'
+      rootMargin: '0px 0px -60px 0px'
     });
 
     revealElements.forEach(el => {
       el.classList.add('reveal');
       observer.observe(el);
     });
+  }
+
+  // Chat bubble sequential pop-in animation
+  const chatBubbles = document.querySelectorAll('.chat-bubble');
+  
+  if (chatBubbles.length > 0 && 'IntersectionObserver' in window) {
+    let chatAnimated = false;
+    
+    const chatObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !chatAnimated) {
+          chatAnimated = true;
+          chatBubbles.forEach((bubble, index) => {
+            setTimeout(() => {
+              bubble.classList.add('chat-visible');
+            }, index * 400); // 400ms delay between each bubble
+          });
+          chatObserver.disconnect();
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    // Observe the chat mockup container
+    const chatMockup = document.querySelector('.chat-mockup');
+    if (chatMockup) {
+      chatObserver.observe(chatMockup);
+    }
   }
 
   // Active nav link highlight on scroll
@@ -133,4 +171,24 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     window.addEventListener('scroll', highlightNav, { passive: true });
   }
+
+  // Smooth scroll with navbar offset for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const targetId = anchor.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        const navbarHeight = navbar ? navbar.offsetHeight : 64;
+        const targetPos = targetEl.getBoundingClientRect().top + window.scrollY - navbarHeight;
+        
+        window.scrollTo({
+          top: targetPos,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
 });
