@@ -387,9 +387,10 @@ h1, h2, h3, h4 {
   transition: all var(--transition-fast);
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
   color: var(--text-primary);
-  background: var(--gray-100);
+  background: var(--bg-secondary);
 }
 
 .menu-toggle {
