@@ -301,7 +301,8 @@ h1, h2, h3, h4 {
 .nav-container {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0.875rem var(--container-padding);
+  padding: 0 var(--container-padding);
+  height: 4rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -314,6 +315,7 @@ h1, h2, h3, h4 {
   text-decoration: none;
   color: var(--text-primary);
   margin-right: auto;
+  height: 36px;
 }
 
 .header-logo {
@@ -329,6 +331,8 @@ h1, h2, h3, h4 {
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.02em;
+  line-height: 1;
+  display: block;
 }
 
 .logo-highlight {
@@ -346,7 +350,9 @@ h1, h2, h3, h4 {
   border: none;
   color: var(--text-secondary);
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -391,8 +397,12 @@ h1, h2, h3, h4 {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0;
+  width: 36px;
+  height: 36px;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
 }
 
