@@ -301,8 +301,7 @@ h1, h2, h3, h4 {
 .nav-container {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 var(--container-padding);
-  height: 4rem;
+  padding: 0.875rem var(--container-padding);
   display: flex;
   align-items: center;
   gap: 1rem;
