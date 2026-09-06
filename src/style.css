@@ -1098,13 +1098,17 @@ h1, h2, h3, h4 {
   }
 
   /* Nav */
+  .navbar {
+    padding-top: env(safe-area-inset-top, 0.5rem);
+  }
+
   .menu-toggle {
     display: flex;
   }
 
   .nav-links {
     position: fixed;
-    top: 4rem;
+    top: calc(4rem + env(safe-area-inset-top, 0.5rem));
     left: 0;
     right: 0;
     background: var(--nav-menu-bg);
@@ -1240,8 +1244,11 @@ h1, h2, h3, h4 {
   }
 
   .footer-nav {
-    justify-content: center;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    text-align: left;
   }
 
   .footer-bottom {
@@ -1267,10 +1274,6 @@ h1, h2, h3, h4 {
   }
 
   .footer-nav {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 }
