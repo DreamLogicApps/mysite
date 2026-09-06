@@ -1099,7 +1099,7 @@ h1, h2, h3, h4 {
 
   /* Nav */
   .navbar {
-    padding-top: env(safe-area-inset-top, 0.5rem);
+    padding-top: env(safe-area-inset-top, 0px);
   }
 
   .menu-toggle {
@@ -1108,7 +1108,7 @@ h1, h2, h3, h4 {
 
   .nav-links {
     position: fixed;
-    top: calc(4rem + env(safe-area-inset-top, 0.5rem));
+    top: calc(4rem + env(safe-area-inset-top, 0px));
     left: 0;
     right: 0;
     background: var(--nav-menu-bg);
