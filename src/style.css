@@ -46,6 +46,10 @@
   --accent-light: var(--orange-50);
   --border-color: var(--gray-200);
   --border-light: var(--gray-100);
+  
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --nav-menu-bg: rgba(255, 255, 255, 0.98);
+  --store-btn-bg: var(--gray-900);
 }
 
 [data-theme="dark"] {
@@ -58,6 +62,10 @@
   --accent-light: rgba(249, 115, 22, 0.1);
   --border-color: var(--gray-800);
   --border-light: var(--gray-800);
+  
+  --nav-bg: rgba(10, 10, 10, 0.85);
+  --nav-menu-bg: rgba(10, 10, 10, 0.98);
+  --store-btn-bg: var(--gray-800);
 }
 
 /* Typography */
@@ -224,14 +232,14 @@ h1, h2, h3, h4 {
 }
 
 .btn-store {
-  background: var(--gray-900);
+  background: var(--store-btn-bg);
   color: var(--white);
   font-size: 0.875rem;
   padding: 0.625rem 1.25rem;
 }
 
 .btn-store:hover {
-  background: var(--gray-800);
+  background: var(--store-btn-bg);
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
@@ -255,9 +263,10 @@ h1, h2, h3, h4 {
 }
 
 .btn-disabled {
-  background: var(--gray-100);
-  color: var(--gray-400);
+  background: var(--bg-secondary);
+  color: var(--text-tertiary);
   cursor: not-allowed;
+
   font-size: 0.875rem;
   padding: 0.625rem 1.25rem;
 }
@@ -270,7 +279,7 @@ h1, h2, h3, h4 {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--nav-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-light);
@@ -577,7 +586,7 @@ h1, h2, h3, h4 {
   height: 44px;
   border-radius: 50%;
   border: 1px solid var(--border-color);
-  background: var(--white);
+  background: var(--bg-primary);
   color: var(--text-primary);
   display: flex;
   align-items: center;
@@ -634,7 +643,7 @@ h1, h2, h3, h4 {
 
 .app-card-img {
   aspect-ratio: 1;
-  background: var(--gray-100);
+  background: var(--bg-secondary);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -1090,7 +1099,7 @@ h1, h2, h3, h4 {
     top: 4rem;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.98);
+    background: var(--nav-menu-bg);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     flex-direction: column;
