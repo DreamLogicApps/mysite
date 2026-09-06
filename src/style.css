@@ -52,6 +52,8 @@
   --store-btn-bg: var(--gray-900);
   --chat-incoming-bg: var(--gray-100);
   --chat-outgoing-bg: var(--gray-900);
+  --btn-x-bg: var(--gray-900);
+  --btn-x-hover: var(--gray-800);
 }
 
 [data-theme="dark"] {
@@ -70,6 +72,8 @@
   --store-btn-bg: var(--gray-800);
   --chat-incoming-bg: var(--gray-800);
   --chat-outgoing-bg: var(--gray-700);
+  --btn-x-bg: var(--gray-800);
+  --btn-x-hover: var(--gray-700);
 }
 
 /* Typography */
@@ -249,14 +253,14 @@ h1, h2, h3, h4 {
 }
 
 .btn-x {
-  background: var(--gray-900);
+  background: var(--btn-x-bg);
   color: var(--white);
   padding: 0.875rem 1.75rem;
   font-size: 1rem;
 }
 
 .btn-x:hover {
-  background: var(--gray-800);
+  background: var(--btn-x-hover);
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
